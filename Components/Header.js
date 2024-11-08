@@ -1,15 +1,15 @@
 import React from 'react'
+import Link from 'next/link'
 
-const Header = (prps) => {
+const Header = () => {
     return (
         <>
-            <div className='h-16 bg-green-400 flex items-center justify-between px-3'>
-                <h2>{prps.user}</h2>
+            <div className='h-16 bg-green-500 border-b-2 border-green-700 text-white flex items-center justify-between px-3'>
+                <h1 className='font-bold text-3xl'>Error List</h1>
                 <div className='flex gap-8'>
-                    <h4>About</h4>
-                    <h4>{prps.sname}</h4>
-                    <h4>Blog</h4>
-                    <h4>Account</h4>
+                    <Link href={'/About'}>About</Link>
+                    <Link href={'/Courses'}>Courses</Link>
+                    <Link href={'/Products'}>Products</Link>
                 </div>
             </div>
         </>
